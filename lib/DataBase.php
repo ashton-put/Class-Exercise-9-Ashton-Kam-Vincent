@@ -76,10 +76,11 @@
  public function insert($query, $values = ''){
         $statement = $this->pdo->prepare($query);
         $goodRecord = false;
+  
         if(is_array($values)){
             $statement->execute($values);
         } else {
-            $statement->execute();
+            $goodRecord->execute();
         }
        
         $statement->closeCursor();
