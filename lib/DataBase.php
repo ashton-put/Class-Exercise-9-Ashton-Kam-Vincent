@@ -73,7 +73,7 @@
     print '<p>' . $sqlText . '</p>';
  }   
 
- public function select($query, $values = ''){
+ public function insert($query, $values = ''){
         $statement = $this->pdo->prepare($query);
         $goodRecord = false;
         if(is_array($values)){
