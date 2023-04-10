@@ -1,0 +1,10 @@
+main{
+    grid-template-areas: "box-1" "box-2" "box-3" "box-4";
+    grid-template-columns: auto auto auto;
+    padding-bottom: 2em;
+}
+main.detail{
+    grid-template-areas: "box-1" "box-5" "box-2" "box-3" "box-4";
+    grid-template-columns: auto;
+    padding-bottom: 2em;
+}

@@ -1,0 +1,297 @@
+/* Root colors and Such */
+:root {
+    --dark-text-color: rgba(26, 27, 37, 1);
+    --main-cream-color: rgba(244, 241, 233, .8);
+    --light-text-color: rgba(244, 241, 233, 1);
+    --header-red-color: rgba(158, 46, 69, .8);
+    --nav-gold-color: rgba(247, 208, 138, .8);
+}
+
+
+
+/* Apply to All Style */
+* {
+    margin: 0.66%;
+    padding: 0.55%;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+
+
+/* HTML Style */
+html{
+    background-color: var(--main-cream-color);
+    color: var(--dark-text-color);
+}
+
+
+
+/* Body Style */ 
+body{
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+    width: 90%;
+    margin: 1% auto;
+    max-width: 50em;
+}
+
+
+
+/* Header Style*/
+header{
+    background-image: url(../image/tin-cans.jpg);
+}
+header h1, header h2{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--header-red-color);
+    color: var(--light-text-color);
+}
+
+
+
+/* Navigation Style*/
+nav, footer{
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--nav-gold-color);
+    color: var(--dark-text-color);
+}
+nav {
+    padding: 1em;
+}
+.nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    background-color: var(--nav-gold-color);
+    color: var(--dark-text-color);
+}
+nav a:link{
+    color: #009;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* Footer Style*/
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    background-color: var(--nav-gold-color);
+    color: var(--dark-text-color);
+}
+footer a:link{
+    color: #009;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer p{
+    text-indent: 0;
+}
+
+
+/* Main Style */
+main{
+    display: grid;
+    grid-area: main;
+    grid-template-areas: "box-1 box-1" "box-2 box-3" "box-4 box-4";
+    grid-template-columns: auto 50%;
+    grid-gap: 0.5%;
+}
+main h1{
+    background-color: var(--light-text-color);
+    text-align: center;
+}
+
+
+
+/* Link Style*/
+a:hover{
+    background-color: aliceblue;
+}
+
+
+
+/* Cite and Fig Caption Style */
+cite {
+    font-size: small;
+}
+figcaption{
+    font-size: small;
+}
+
+
+
+/* Section Style */
+section h2{
+    background-color: var(--light-text-color);
+    text-align: center;
+}
+
+
+
+/* Figure Style*/
+figure img{
+    max-width: 100%;
+    border: thin solid black;
+}
+.rounded{
+    border-radius: 2%
+}
+figure {
+    text-align: center;
+}
+
+
+/* Paragraph Style */
+p{
+    color: var(--dark-text-color);
+    text-indent: 10%;
+}
+
+
+
+/* Form Style */
+form {
+    background-color: var(--main-bg-color-rgba);
+    border: thin solid black;
+    clear: both;
+    max-width: 30em;
+    margin: auto;
+    padding: 1%;
+}
+form p {
+    text-indent: 0;
+}
+fieldset {
+    padding: 1%;
+    border: none;
+}
+legend {
+    margin-top: 1%;
+    color: white;
+    font-weight: bold;
+}
+.radio label,
+.checkbox label, 
+.text label {
+    display: inline;
+}
+.radio legend,
+.checkbox legend,
+.contact legend, 
+.text legend {
+    padding-top: 2.5em
+}
+.radio,
+.checkbox,
+.contact {
+    background-color: var(--header-red-color);
+}
+.text{
+    background-color: var(--header-red-color);
+}
+.radio input,
+.checkbox input, 
+.text input {
+    width: initial;
+}
+input {
+    width: 100%;
+}
+textarea {
+    width: 100%;
+}
+select {
+    width: 100%;
+}
+input[type=submit] {
+    background: green;
+    color: white;
+    font-size: x-large;
+    padding: 1%;
+}
+
+
+
+/* Table Style */
+table{
+    border: medium solid var(--dark-text-color);
+    border-collapse: collapse;
+    margin: auto;
+}
+table th{
+    background-color: var(--header-red-color);
+    color: white;
+}
+table+p{
+    padding-top: 2em;
+}
+td, th{
+    border: medium dashed var(--dark-text-color);
+    padding: 1em
+}
+tr:nth-child(odd){
+    background-color: lightgrey;
+}
+tr:nth-child(even){
+    background-color: white;
+}
+tr:hover{
+    background-color: var(--main-cream-color);
+    color: var(--dark-text-color);
+    text-decoration: underline;
+}
+caption{
+    font-weight: bolder;
+    padding-top: 1em;
+}
+
+
+
+/* Grid Style Stuff */
+.box1{
+    grid-area: box-1;
+}
+.box2{
+    grid-area: box-2;
+}
+.box3{
+    grid-area: box-3;
+}
+.box4{
+    grid-area: box-4;
+}
+.box5{
+    grid-area: box-5;
+}
+
+
+
+/* Detail Page Stuff*/
+.detail{
+    grid-template-areas: "box-1 box-1" "box-5 box-5" "box-2 box-3" "box-4 box-4";
+}
+.detail figure{
+    width: 100%;
+}
+
+
+
+/* Form Page Stuff*/
+.form{
+    grid-template-areas: "box-1 box-1" "box-2 box-5" "box-3 box-3" "box-4 box-4";
+}
+
+.activePage{
+    background-color: aliceblue;
+}

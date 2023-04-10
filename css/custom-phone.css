@@ -1,0 +1,4 @@
+nav{
+    grid-template-columns: auto;
+    display: grid;
+}
