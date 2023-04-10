@@ -58,7 +58,7 @@
         return $recordSet;
     }
 
-    public function displaySQL($sql, $data = '')
+    public function displaySQL($sql, $data = ''){
         $sqlText = $sql;
         foreach ($data as $value){
             // Look for ? and replace with the value
@@ -72,4 +72,17 @@
     
     print '<p>' . $sqlText . '</p>';
  }   
+
+ public function select($query, $values = ''){
+        $statement = $this->pdo->prepare($query);
+        $goodRecord = false;
+        if(is_array($values)){
+            $statement->execute($values);
+        } else {
+            $statement->execute();
+        }
+       
+        $statement->closeCursor();
+        return $goodRecord;
+    }
  ?>
